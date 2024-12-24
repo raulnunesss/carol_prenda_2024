@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para a Minha Namorada</title>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          background-color: #fdf6f0;
+          color: #333;
+          margin: 0;
+          padding: 0;
+      }
+
+      h1 {
+          color: #ff6f61;
+          margin-top: 20px;
+      }
+
+      .carrossel {
+          position: relative;
+          width: 80%;
+          max-width: 600px;
+          margin: 20px auto;
+          overflow: hidden;
+          border-radius: 15px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .carrossel img {
+          width: 100%;
+          display: none;
+          transition: opacity 1s ease-in-out;
+      }
+
+      .carrossel img.ativo {
+          display: block;
+          opacity: 1;
+      }
+
+      .contador {
+          font-size: 1.5em;
+          margin-top: 20px;
+      }
+      
+      footer {
+          margin-top: 30px;
+          font-size: 0.9em;
+          color: #555;
+      }
+      .carta {
+          background-color: #fff5f8; /* Cor de fundo suave */
+          color: #333; /* Cor do texto */
+          padding: 20px;
+          margin: 20px auto;
+          border-radius: 10px;
+          max-width: 600px; /* Largura máxima da carta */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+          font-family: 'Georgia', serif; /* Fonte clássica */
+          line-height: 1.6; /* Espaçamento entre linhas */
+      }
+      .carta h2 {
+          color: #ff4d4d; /* Cor do título */
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      .carta p {
+          margin-bottom: 15px;
+          text-align: justify; /* Justifica o texto */
+      }
+      .carta p:last-child {
+          text-align: right; /* Alinha a assinatura à direita */
+          font-style: italic; /* Estilo itálico para a assinatura */
+      }
+      .galeria {
+          display: flex;
+          grid-template-columns: repeat(2, 1fr);
+          justify-content: center;
+          gap: 15px;
+          margin-top: 30px;
+      }
+      .galeria img {
+          border-radius: 10px;
+          width: 250px;
+          height: 300px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      #resposta-box {
+          margin-top: 30px;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      #resposta-box textarea {
+          width: 100%;
+          height: 150px;
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-top: 10px
+      }
+      #resposta-box button {
+          margin-top: 10px;
+          padding: 10px 20px;
+          background-color: #ff4d4d;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+      }
+      #resposta-box button:hover {
+          background-color: #333;
+      }    
+      
+      .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      }
+
+      .event {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        width: 80%; /* Ajusta a largura do conteúdo */
+        position: relative;
+        
+      }
+
+      .date {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        color: #555;
+        text-align: center;
+      }
+
+      .content {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        max-width: 600px; /* 2*/
+        text-align: center;
+        margin: 20px, auto; /* 1 */
+      }
+
+      .timeline-img {
+        margin-top: 15px;
+        border-radius: 10px;
+        max-width: 100%; /* Garante que a imagem se ajuste ao tamanho do contêiner */
+        height: 250px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+
+</style>
+
+
+</head>
+<body>
+  <h1>Feliz Natal 🎄💚</h1>
+  <div class="carrossel">
+    <img src="Imagens/Foto1.jpg" alt="Foto 1" class="ativo">
+    <img src="Imagens/Foto2.jpg" alt="Foto 2">
+    <img src="Imagens/Foto3.JPG" alt="Foto 3">
+    
+    </div>
+    <h1>Juntos</h1>
+    <div class="contador" id="tempo"></div>
+
+    <footer>
+    <p>Feito com ❤️ para ti!</p>
+    </footer>
+
+    <div class="carta">
+      <h2>Minha Carta para ti 💌</h2>
+      <p>
+          Querida Princesa,
+      </p>
+      <p>
+        Hoje não completamos um ano juntos, mas estamos a passar o nosso primeiro Natal não fazia ideia de o
+        passar com uma pessoa tão especial ao meu lado. Nem consigo te dizer em palavras o quanto estou feliz 
+        por te ter. Este ano foi especial de tantas formas, mas o melhor presente que a vida me deu foi  conhecer-te. <br><br>
+
+        Parece incrível pensar em como tudo começou, e como, dia após dia fomos construindo isto tudo tão bonito. 
+        A tua presença enche os meus dias de felicidade, e cada sorriso teu faz o meu coração bater mais forte. 
+        Nunca imaginei que alguém me pudesse me fazer sentir assim: completo, amado e inspirado a ser uma pessoa melhor.<br><br>
+
+        Neste Natal, tudo o que te desejo é que te sintas tão especial o quão és para mim. Que cada abraço meu te aqueça,   
+        e que cada momento que compartilharmos seja uma lembrança para recordar. Quero que tu também saibas que o meu amor 
+        por ti cresce dia após dia, e mal posso esperar pelos próximos Natais ao teu lado.<br><br>
+
+        Obrigado por seres minha namorada, melhor amiga e a pessoa que me faz mais feliz. Que este seja o primeiro de 
+        muitos Natais que celebraremos como um casal, contribuindo memórias, sonhos e uma história só nossa.<BR> <BR>
+
+      </p>
+      <p>
+        P.S. Espero que este site te faça sorrir, assim como tu iluminas os meus dias. Amo-te mais do que as palavras podem expressar!<br><br>
+      </p>
+      <p>
+        Amo-te Carol, e sempre vou amar,<br>
+        Com todo o meu amor,<br>
+        Raúl Nunes ❤️
+      </p>
+  </div>
+
+  <br> 
+
+    <h2>Memórias de 2024</h2>
+    <p>Deixo-te aqui algumas fotos nossas ao longo deste ano para recordar! 💞</p>
+
+    <div class="timeline">
+
+        <div class="event">
+          <div class="date">27/06/2024</div>
+          <div class="content">
+            <h3>Primeiro encontro</h3>
+            <p>Quando eu fui ter contigo a tua casa aqui doi o início de tudo!</p>
+            <img src="Imagens/Foto21.jpg" alt="T1" class="timeline-img">
+          </div>
+        </div>
+
+        <div class="event">
+            <div class="date">28/06/2024</div>
+            <div class="content">
+              <h3>Primeiro date</h3>
+              <p>Na primeira vez que estivemos juntos fomos logo comer ás docas!</p>
+              <img src="Imagens/Foto22.jpg" alt="T2" class="timeline-img">
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="date">08/08/2024</div>
+            <div class="content">
+              <h3>Ida a Faro</h3>
+              <p>Era de verão tinhas ido para faro e fui ter contigo lá pela primeira vez!</p>
+              <img src="Imagens/Foto5.jpg" alt="T3" class="timeline-img">
+            </div>
+        </div>          
+
+
+        <div class="event">
+            <div class="date">10/08/2024</div>
+            <div class="content">
+              <h3>Primeira vez em tua casa</h3>
+              <p>Neste verão fui pela priemria vez a tua casa e conhecer a tua família!</p>
+              <img src="Imagens/Foto23.jpg" alt="T4" class="timeline-img">
+            </div>
+        </div>
+
+        <div class="event">
+          <div class="date">07/09/2024</div>
+          <div class="content">
+            <h3>Trabalho/Aulas</h3>
+            <p>Aqui tava eu a trabalhar e tu já tinhas vindo do Algarve e eu fui ter contigo!</p>
+            <img src="Imagens/Foto24.jpg" alt="T5" class="timeline-img">
+          </div>
+      </div>
+
+      <div class="event">
+        <div class="date">20/09/2024</div>
+        <div class="content">
+          <h3>Presente</h3>
+          <p>Ofereci-te umas rosas e fui ter contigo depois da época dos incêndios!</p>
+          <img src="Imagens/Foto25.JPG" alt="T6" class="timeline-img"> <img src="Imagens/Foto26.jpg" alt="T7" class="timeline-img">
+        </div>
+      </div>
+      
+      <div class="event">
+        <div class="date">21/09/2024</div>
+        <div class="content">
+          <h3>Jardim Zoológico</h3>
+          <p>Aqui fomos ao jardim zoológico com os teus pais!</p>
+          <img src="Imagens/Foto27.jpg" alt="T8" class="timeline-img"> 
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="date">27/09/2024</div>
+        <div class="content">
+          <h3>Em minha casa</h3>
+          <p>Vieste pela primeira vez a minha casa!</p>
+          <img src="Imagens/Foto28.jpg" alt="T9" class="timeline-img"> 
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="date">01/10/2024</div>
+        <div class="content">
+          <h3>Latada (Coimbra) </h3>
+          <p></p>
+          <img src="Imagens/Foto29.jpg"alt="T10" class="timeline-img">  <img src="Imagens/Foto30.jpg"alt="T10" class="timeline-img"> 
+        </div>
+      </div>
+
+
+      <div class="event">
+        <div class="date">01/10/2024</div>
+        <div class="content">
+          <h3>Oliveira do Hospital </h3>
+          <p>Primeira vez juntos em Oliveira</p>
+          <img src=""alt="T10" class="timeline-img"> 
+        </div>
+      </div>
+
+
+    </div>
+    
+
+
+  <!-- Caixa para Resposta -->
+    <div id="resposta-box">
+        <h3>Se quiseres deixar-me uma menssagem...</h3>
+          <!-- Formulário com ação do Formspree -->
+        <form action="https://formspree.io/f/mdkowear" method="POST">
+            <textarea name="mensagem" placeholder="Eescreve..." required></textarea><br>
+            <button type="submit">Enviar Resposta</button>
+        </form>
+    </div>
+
+  <script>
+    // Função para calcular o tempo desde uma data até o momento atual
+    function calcularTempoJuntos() {
+            // Data de início (substitua com a data real de quando começou)
+            var dataInicio = new Date("2024-09-20T00:00:00"); // Exemplo: 15 de junho de 2022
+            var dataAtual = new Date(); // Data atual
+
+            // Calcular a diferença em milissegundos
+            var diff = dataAtual - dataInicio;
+
+            // Calcular a diferença em anos, meses, dias, horas, minutos e segundos
+            var anos = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+            var meses = Math.floor((diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)); // Aproximadamente 30 dias por mês
+            var dias = Math.floor((diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+
+            var horas = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            var segundos = Math.floor((diff % (1000 * 60)) / 1000);
+
+            // Exibir o tempo juntos em formato legível
+            var tempoFormatado = anos + " anos, " + meses + " meses e " + dias + " dias <br>" +
+                                 horas + " horas, " + minutos + " minutos e " + segundos + " segundos";
+
+            // Exibir o resultado na página
+            document.getElementById("tempo").innerHTML = tempoFormatado;
+        }
+        
+
+        // Chama a função para calcular o tempo desde a data de início
+        calcularTempoJuntos();
+        
+
+    // Carrossel de imagens
+    const imagens = document.querySelectorAll('.carrossel img');
+    let index = 0;
+
+    function trocarImagem() {
+      imagens[index].classList.remove('ativo');
+      index = (index + 1) % imagens.length; // Passa para a próxima imagem, voltando ao início se necessário
+      imagens[index].classList.add('ativo');
+    }
+
+
+    setInterval(calcularTempoJuntos, 1000); //Atualizar a cada segundo
+    setInterval(trocarImagem, 3000); // Troca de imagem a cada 3 segundos
+  </script>
+</body>
+</html>
