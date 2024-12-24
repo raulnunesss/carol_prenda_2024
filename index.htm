@@ -1,162 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para a Minha Namorada</title>
-  <style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #fdf6f0;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
-    h1 {
-        color: #ff6f61;
-        margin-top: 20px;
-    }
-    .carrossel {
-        position: relative;
-        width: 80%;
-        max-width: 600px;
-        margin: 20px auto;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .carrossel img {
-        width: 100%;
-        display: none;
-        transition: opacity 1s ease-in-out;
-    }
-    .carrossel img.ativo {
-        display: block;
-        opacity: 1;
-    }
-    .contador {
-        font-size: 1.5em;
-        margin-top: 20px;
-    }
-    footer {
-        margin-top: 30px;
-        font-size: 0.9em;
-        color: #555;
-    }
-    .carta {
-        background-color: #fff5f8; /* Cor de fundo suave */
-        color: #333; /* Cor do texto */
-        padding: 20px;
-        margin: 20px auto;
-        border-radius: 10px;
-        max-width: 600px; /* Largura máxima da carta */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
-        font-family: 'Georgia', serif; /* Fonte clássica */
-        line-height: 1.6; /* Espaçamento entre linhas */
-    }
-    .carta h2 {
-        color: #ff4d4d; /* Cor do título */
-        text-align: center;
-        margin-bottom: 20px;
-    }
-    .carta p {
-        margin-bottom: 15px;
-        text-align: justify; /* Justifica o texto */
-    }
-    .carta p:last-child {
-        text-align: right; /* Alinha a assinatura à direita */
-        font-style: italic; /* Estilo itálico para a assinatura */
-    }
-    .galeria {
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          text-align: center;
+          background-color: #fdf6f0;
+          color: #333;
+          margin: 0;
+          padding: 0;
+      }
+
+      h1 {
+          color: #ff6f61;
+          margin-top: 20px;
+      }
+
+      .carrossel {
+          position: relative;
+          width: 80%;
+          max-width: 600px;
+          margin: 20px auto;
+          overflow: hidden;
+          border-radius: 15px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .carrossel img {
+          width: 100%;
+          display: none;
+          transition: opacity 1s ease-in-out;
+      }
+
+      .carrossel img.ativo {
+          display: block;
+          opacity: 1;
+      }
+
+      .contador {
+          font-size: 1.5em;
+          margin-top: 20px;
+      }
+      
+      footer {
+          margin-top: 30px;
+          font-size: 0.9em;
+          color: #555;
+      }
+      .carta {
+          background-color: #fff5f8; /* Cor de fundo suave */
+          color: #333; /* Cor do texto */
+          padding: 20px;
+          margin: 20px auto;
+          border-radius: 10px;
+          max-width: 600px; /* Largura máxima da carta */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+          font-family: 'Georgia', serif; /* Fonte clássica */
+          line-height: 1.6; /* Espaçamento entre linhas */
+      }
+      .carta h2 {
+          color: #ff4d4d; /* Cor do título */
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      .carta p {
+          margin-bottom: 15px;
+          text-align: justify; /* Justifica o texto */
+      }
+      .carta p:last-child {
+          text-align: right; /* Alinha a assinatura à direita */
+          font-style: italic; /* Estilo itálico para a assinatura */
+      }
+      .galeria {
+          display: flex;
+          grid-template-columns: repeat(2, 1fr);
+          justify-content: center;
+          gap: 15px;
+          margin-top: 30px;
+      }
+      .galeria img {
+          border-radius: 10px;
+          width: 250px;
+          height: 300px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      #resposta-box {
+          margin-top: 30px;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      #resposta-box textarea {
+          width: 100%;
+          height: 150px;
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-top: 10px
+      }
+      #resposta-box button {
+          margin-top: 10px;
+          padding: 10px 20px;
+          background-color: #ff4d4d;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-size: 16px;
+          cursor: pointer;
+      }
+      #resposta-box button:hover {
+          background-color: #333;
+      }    
+      
+      .timeline {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      }
+
+      .event {
         display: flex;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
-        gap: 15px;
-        margin-top: 30px;
-    }
-    .galeria img {
-        border-radius: 10px;
-        width: 250px;
-        height: 300px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    #resposta-box {
-        margin-top: 30px;
-        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0;
+        width: 80%; /* Ajusta a largura do conteúdo */
+        position: relative;
+        
+      }
+
+      .date {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+        color: #555;
+        text-align: center;
+      }
+
+      .content {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #resposta-box textarea {
-        width: 100%;
-        height: 150px;
-        padding: 10px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-    #resposta-box button {
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #ff4d4d;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-    #resposta-box button:hover {
-        background-color: #333;
-    }    
-    .timeline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-}
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        max-width: 600px; /* 2*/
+        text-align: center;
+        margin: 20px, auto; /* 1 */
+      }
 
-.event {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px 0;
-  width: 80%; /* Ajusta a largura do conteúdo */
-  position: relative;
-}
+      .timeline-img {
+        margin-top: 15px;
+        border-radius: 10px;
+        max-width: 100%; /* Garante que a imagem se ajuste ao tamanho do contêiner */
+        height: 250px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
 
-.date {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-  color: #555;
-  text-align: center;
-}
 
-.content {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  max-width: 600px; /* 2*/
-  text-align: center;
-  margin: 20px, auto; /* 1 */
-}
+</style>
 
-.timeline-img {
-  margin-top: 15px;
-  border-radius: 10px;
-  max-width: 100%; /* Garante que a imagem se ajuste ao tamanho do contêiner */
-  height: 250px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
 
-  </style>
 </head>
 <body>
   <h1>Feliz Natal 🎄💚</h1>
@@ -196,7 +207,7 @@
 
       </p>
       <p>
-        P.S.:Espero que este site te tenha feito sorrir, assim como tu me iluminas os meus dias. Amo-te mais do que as palavras podem expressar!<br><br>
+        P.S. Espero que este site te faça sorrir, assim como tu iluminas os meus dias. Amo-te mais do que as palavras podem expressar!<br><br>
       </p>
       <p>
         Amo-te Carol, e sempre vou amar,<br>
@@ -277,7 +288,7 @@
       </div>
 
       <div class="event">
-        <div class="date">21/09/2024</div>
+        <div class="date">27/09/2024</div>
         <div class="content">
           <h3>Em minha casa</h3>
           <p>Vieste pela primeira vez a minha casa!</p>
@@ -285,9 +296,28 @@
         </div>
       </div>
 
+      <div class="event">
+        <div class="date">01/10/2024</div>
+        <div class="content">
+          <h3>Latada (Coimbra) </h3>
+          <p></p>
+          <img src="Imagens/Foto29.jpg"alt="T10" class="timeline-img">  <img src="Imagens/Foto30.jpg"alt="T10" class="timeline-img"> 
+        </div>
+      </div>
+
+
+      <div class="event">
+        <div class="date">01/10/2024</div>
+        <div class="content">
+          <h3>Oliveira do Hospital </h3>
+          <p>Primeira vez juntos em Oliveira</p>
+          <img src=""alt="T10" class="timeline-img"> 
+        </div>
+      </div>
+
+
     </div>
     
- 
 
 
   <!-- Caixa para Resposta -->
